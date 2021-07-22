@@ -4,7 +4,6 @@ import discord
 from discord.ext import commands
 from helpers import pagination
 
-
 class CustomHelpCommand(commands.HelpCommand):
     def __init__(self):
         super().__init__(
