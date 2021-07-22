@@ -24,15 +24,7 @@ class Bot(commands.AutoShardedBot):
         for i in COGS:
             self.load_extension(f"cogs.{i}")
 
-    @property
-    def log(self):
-        return self.get_cog("Logging").log
-
-    async def on_ready(self):
-        self.log.info(f"Ready called.")
-
     async def close(self):
-        self.log.info("Shutting down")
         await super().close()
 
 
