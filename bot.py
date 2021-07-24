@@ -6,7 +6,8 @@ import config
 COGS = [
     "fun",
     "utility",
-    "help"
+    "help",
+    "moderation"
 ]
 
 class Bot(commands.AutoShardedBot):
