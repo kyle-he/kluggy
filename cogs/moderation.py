@@ -19,14 +19,14 @@ class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.Cog.listener()
-    async def on_message(self, message):
-        if message.author.id in UWU_KIDS and (
-            message.content.count("w") >= len(message.content) / 2
-            or "uw" in message.content
-        ):
-            await message.delete()
-            await message.channel.send(f"<@!{message.author.id}> watch the w's!")
+    # @commands.Cog.listener()
+    # async def on_message(self, message):
+    #     if message.author.id in UWU_KIDS and (
+    #         message.content.count("w") >= len(message.content) / 2
+    #         or "uw" in message.content
+    #     ):
+    #         await message.delete()
+    #         await message.channel.send(f"<@!{message.author.id}> watch the w's!")
 
 
 def setup(bot):
