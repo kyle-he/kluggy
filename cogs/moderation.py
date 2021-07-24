@@ -24,6 +24,7 @@ class Moderation(commands.Cog):
         if message.author.id in UWU_KIDS and (
             message.content.count("w") >= 3
             or message.content.count("w") >= len(message.content) / 2
+            or "uw" in message.content
         ):
             await message.delete()
             await message.channel.send(f"<@!{message.author.id}> watch the w's!")
