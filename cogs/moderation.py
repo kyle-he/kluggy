@@ -19,9 +19,8 @@ class Moderation(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        if message.author.id in UWU_KIDS and message.attachments:
+        if message.author.id in UWU_KIDS:
             await message.delete()
-
 
 
 def setup(bot):
