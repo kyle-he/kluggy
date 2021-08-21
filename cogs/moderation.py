@@ -5,7 +5,10 @@ from typing import Union
 import discord
 from discord.ext import commands
 
-UWU_KIDS = (287025331465093120, 344299314262048769)
+UWU_KIDS = (
+    287025331465093120,
+    344299314262048769
+)
 
 
 class Moderation(commands.Cog):
@@ -16,7 +19,7 @@ class Moderation(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        if message.author.id in UWU_KIDS:
+        if message.author.id in UWU_KIDS and message.attachments:
             await message.delete()
 
 
